@@ -14,7 +14,7 @@ function App() {
   {
     id: nanoid(),
     text:"This is my second note",
-    date:"03/11/2021"
+    date:"10/12/2021"
   },
   {
     id: nanoid(),
