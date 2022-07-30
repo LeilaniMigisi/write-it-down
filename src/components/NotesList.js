@@ -1,25 +1,18 @@
-import React from 'react';
-import Note from './Note';
-// import AddNote from './AddNote';
+import React from 'react'
+import Note from './Note'
+import AddNote from '/home/leilani/write-it-down/src/components/ AddNote.js'
 
-const NotesList = ({
-	notes,
-	handleAddNote,
-	handleDeleteNote,
-}) => {
-	return (
-		<div className='notes-list'>
-			{notes.map((note) => (
-				<Note
-					id={note.id}
-					text={note.text}
-					date={note.date}
-					handleDeleteNote={handleDeleteNote}
-				/>
-			))}
-		
-		</div>
-	);
-};
+const NotesList=({notes,handleAddNote,handleDelete}) =>{
+    return (
+        <div className="notes-list">
+           {notes.map((note)=>
+               <Note id={note.id} text={note.text} date={note.date}
+               handleDelete={handleDelete}
+               />
+           )}
+           <AddNote handleAddNote={handleAddNote}/>
+        </div>
+    )
+}
 
-export default NotesList;
+export default NotesList
